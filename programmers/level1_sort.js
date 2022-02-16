@@ -27,15 +27,11 @@ array	commands	return
 function solution(array, commands) {
     var answer = [];
 
-    commands.forEach(item => {
-        const i = item[0];
-        const j = item[1];
-        const k = item[2];
+    commands.forEach(command => {
+        const [i, j, k] = command;
 
         let temps = array.slice(i-1, j);
-        temps.sort(function(a,b) {
-            return a - b;
-        });
+        temps.sort((a,b) => a-b);
         answer.push(temps[k-1]);
     });
 
