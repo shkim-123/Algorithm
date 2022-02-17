@@ -42,3 +42,16 @@ function solution(n) {
 
     return answer;
 }
+
+function solution2(n) {
+    return parseInt([...n.toString(3)].reverse().join(""), 3);
+}
+
+/*
+toString() 은 기수(radix)를 매개변수 취급
+기수의 값은 2 ~ 36
+기수를 이용하여 10진수를 2 ~ 36 진수로 변환할 수 있음
+
+let n = 45
+n.toString(3);   // -> '1200', 45를 3진수로 변환
+*/
