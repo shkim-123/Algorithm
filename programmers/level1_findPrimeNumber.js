@@ -47,7 +47,6 @@ function solution(n) {
 
 function solution(n) {
     let arr = new Array(n+1).fill(1);
-
     arr.fill(0, 0, 2);
 
     for (let i = 2; i*i < n; i++) {
@@ -55,8 +54,6 @@ function solution(n) {
             arr[j] = 0;
         }
     }
-
-    let answer = arr.filter(number => number !== 0);
-
-    return answer.length;
+    
+    return arr.filter(number => number !== 0).length;
 }
