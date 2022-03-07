@@ -21,7 +21,7 @@ arr	answer
 
 function solution(arr) {
     let answer = [arr.shift()];
-    arr.filter((num, index) => {
+    arr.filter(num => {
         answer[answer.length-1] != num && answer.push(num); 
     });
 
